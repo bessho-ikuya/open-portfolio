@@ -118,7 +118,7 @@ export default async function Home({ params }: { params: { locale: Langs } }) {
               {t('setting.qiitaUserName') && t('setting.qiitaUserName') !== "" && (<>
                 {/* Qiita Section */}
                 <div>
-                  <SectionHeader title="Qiita記事" description="Qiitaで書いた記事" />
+                  <SectionHeader title={t('Qiita Article')} description={t('Qiita articles written by me')} />
                   <QiitaArticleList userName={t('setting.qiitaUserName')} />
                 </div>
               </>)}
