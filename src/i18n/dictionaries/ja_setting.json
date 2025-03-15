@@ -1,0 +1,51 @@
+{
+  "name": "John Doe",
+  "title": "フルスタックエンジニア / ブロックチェーンエンジニア / テックリード",
+  "profileImageUrl": "",
+  "email": "open-portfolio@example.com",
+  "location": "日本",
+  "githubUsername": "open-portfolio",
+  "contactFormUrl": "https://example.com/contact",
+  "qiitaUserName": "",
+  "experience": [
+    {
+      "name": "ネットワーク & DB",
+      "skills": {
+        "設計・構築": "1年～3年",
+        "運用・保守": "1年～3年"
+      }
+    },
+    {
+      "name": "プログラミング",
+      "skills": {
+        "PHP": "1年～3年",
+        "Go": "1年～3年",
+        "JavaScript": "1年～3年",
+        "TypeScript": "1年～3年",
+        "SQL": "1年～3年",
+        "Python": "1年未満"
+      }
+    }
+  ],
+  "workHistory": [
+    {
+      "order": 1,
+      "period": "2024/1〜",
+      "projectName": "ブロックチェーンを活用した認証システム",
+      "responsibilities": "システム設計 / インフラ / フロントエンド / バックエンド",
+      "teamSize": "1 ~ 3人",
+      "environment": "GCP / typescript",
+      "frameworks": "solidity, alchemy, thirdweb, ERC-721, ERC-20, Nextjs",
+      "description": "分散型認証を可能にするシステムを開発。"
+    }
+  ],
+  "projects": [
+    {
+      "title": "Dummy Project",
+      "description": "AIを活用したダミーサービス。",
+      "imageUrl": "/products/default.jpg",
+      "url": "http://localhost:3000",
+      "technologies": "Next.js, 生成AI, PostgreSQL, Vercel, Googleログイン"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "name": "John Doe",
+  "title": "full stack engineer / blockchain engineer / tech lead",
+  "profileImageUrl": "",
+  "email": "open-portfolio@example.com",
+  "location": "Japan",
+  "githubUsername": "open-portfolio",
+  "contactFormUrl": "https://example.com/contact",
+  "qiitaUserName": "",
+  "experience": [
+    {
+      "name": "Network & DB",
+      "skills": {
+        "Design & Construction": "1 year ~ 3 years",
+        "Operation & Maintenance": "1 year ~ 3 years"
+      }
+    },
+    {
+      "name": "Programming",
+      "skills": {
+        "PHP": "1 year ~ 3 years",
+        "Go": "1 year ~ 3 years",
+        "JavaScript": "1 year ~ 3 years",
+        "TypeScript": "1 year ~ 3 years",
+        "SQL": "1 year ~ 3 years",
+        "Python": "less than 1 year"
+      }
+    }
+  ],
+  "workHistory": [
+    {
+      "order": 1,
+      "period": "2024/1 ~",
+      "projectName": "Blockchain-based authentication system",
+      "responsibilities": "System design / Infrastructure / Frontend / Backend",
+      "teamSize": "1 ~ 3 people",
+      "environment": "GCP / typescript",
+      "frameworks": "solidity, alchemy, thirdweb, ERC-721, ERC-20, Nextjs",
+      "description": "Developed a system that allows decentralized authentication."
+    }
+  ],
+  "projects": [
+    {
+      "title": "Dummy Project",
+      "description": "A dummy service using AI.",
+      "imageUrl": "/products/default.jpg",
+      "url": "http://localhost:3000",
+      "technologies": "Next.js, Generative AI, PostgreSQL, Vercel, Google Login"
+    }
+  ]
+}
