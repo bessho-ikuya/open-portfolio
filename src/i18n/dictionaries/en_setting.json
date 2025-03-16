@@ -2,10 +2,10 @@
   "name": "John Doe",
   "title": "full stack engineer / blockchain engineer / tech lead",
   "profileImageUrl": "",
-  "email": "open-portfolio@example.com",
+  "email": "open-portfolio-demo@bedev.site",
   "location": "Japan",
-  "githubUsername": "open-portfolio",
-  "contactFormUrl": "https://example.com/contact",
+  "githubUsername": "open-portfolio-demo-bedev-site",
+  "contactFormUrl": "https://open-portfolio-demo.bedev.site/contact",
   "qiitaUserName": "",
   "experience": [
     {
@@ -37,6 +37,16 @@
       "environment": "GCP / typescript",
       "frameworks": "solidity, alchemy, thirdweb, ERC-721, ERC-20, Nextjs",
       "description": "Developed a system that allows decentralized authentication."
+    },
+    {
+      "order": 2,
+      "period": "2025/2 ~",
+      "projectName": "Subscription-based EC system",
+      "responsibilities": "System design / Infrastructure / Frontend / Backend",
+      "teamSize": "1 ~ 3 people",
+      "environment": "GCP / typescript",
+      "frameworks": "Nextjs, PostgreSQL, Stripe, TailwindCSS, Shadcn/ui",
+      "description": "Developed a subscription-based EC system."
     }
   ],
   "projects": [
@@ -44,7 +54,7 @@
       "title": "Dummy Project",
       "description": "A dummy service using AI.",
       "imageUrl": "/products/default.jpg",
-      "url": "http://localhost:3000",
+      "url": "https://open-portfolio-demo.bedev.site",
       "technologies": "Next.js, Generative AI, PostgreSQL, Vercel, Google Login"
     }
   ]

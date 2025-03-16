@@ -3,6 +3,7 @@ import '../globals.css';
 import { Noto_Sans_JP } from 'next/font/google';
 import { getDictionary } from '@/i18n';
 import { LangProvider } from '@/contexts/LangContext';
+import { ThemeProvider } from '@/components/theme-provider';
 import { Langs } from '@/i18n/config';
 
 const notoSansJp = Noto_Sans_JP({
@@ -30,9 +31,16 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
   const dict = await getDictionary(params.locale);
 
   return (
-    <html lang={params.locale}>
+    <html lang={params.locale} suppressHydrationWarning>
       <body className={`${notoSansJp.className} antialiased`}>
-        <LangProvider dict={dict}>{children}</LangProvider>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <LangProvider dict={dict}>{children}</LangProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

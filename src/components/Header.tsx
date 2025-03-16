@@ -41,7 +41,7 @@ export function Header({
       <div className="relative pt-16">
         {/* Profile Image */}
         <div className="absolute left-1/2 -translate-x-1/2 -top-16">
-          <Avatar className="h-32 w-32 border-4 border-teal-500 dark:border-gray-800 rounded-full">
+          <Avatar className="h-32 w-32 border-4 border-teal-500 rounded-full">
             {imageUrl && imageUrl !== '' ? (
               <Image src={imageUrl} alt="Profile" fill className="object-cover" />
             ) : (
@@ -82,7 +82,7 @@ export function Header({
                   href={contactFormUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center hover:text-blue-600"
+                  className="flex items-center hover:text-teal-600"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -98,7 +98,7 @@ export function Header({
                 </a>
                 <button
                   onClick={handleCopy}
-                  className="p-1 hover:text-blue-600 relative"
+                  className="p-1 hover:text-teal-600 relative"
                   aria-label="Copy email address"
                 >
                   {showCopied ? (
@@ -139,7 +139,7 @@ export function Header({
                   href={`https://github.com/${githubUsername}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center hover:text-blue-600"
+                  className="flex items-center hover:text-teal-600"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -155,7 +155,7 @@ export function Header({
                 </a>
                 <button
                   onClick={handleGithubCopy}
-                  className="p-1 hover:text-blue-600 relative"
+                  className="p-1 hover:text-teal-600 relative"
                   aria-label="Copy GitHub username"
                 >
                   {showGithubCopied ? (

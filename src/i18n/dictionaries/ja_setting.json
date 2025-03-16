@@ -2,10 +2,10 @@
   "name": "John Doe",
   "title": "フルスタックエンジニア / ブロックチェーンエンジニア / テックリード",
   "profileImageUrl": "",
-  "email": "open-portfolio@example.com",
+  "email": "open-portfolio-demo@bedev.site",
   "location": "日本",
-  "githubUsername": "open-portfolio",
-  "contactFormUrl": "https://example.com/contact",
+  "githubUsername": "open-portfolio-demo-bedev-site",
+  "contactFormUrl": "https://open-portfolio-demo.bedev.site/contact",
   "qiitaUserName": "",
   "experience": [
     {
@@ -37,6 +37,16 @@
       "environment": "GCP / typescript",
       "frameworks": "solidity, alchemy, thirdweb, ERC-721, ERC-20, Nextjs",
       "description": "分散型認証を可能にするシステムを開発。"
+    },
+    {
+      "order": 2,
+      "period": "2025/2〜",
+      "projectName": "サブスク型ECシステムの構築",
+      "responsibilities": "システム設計 / インフラ / フロントエンド / バックエンド",
+      "teamSize": "1 ~ 3人",
+      "environment": "GCP / typescript",
+      "frameworks": "Nextjs, PostgreSQL, Stripe, TailwindCSS, Shadcn/ui",
+      "description": "サブスク型ECシステムを開発。"
     }
   ],
   "projects": [
@@ -44,7 +54,7 @@
       "title": "Dummy Project",
       "description": "AIを活用したダミーサービス。",
       "imageUrl": "/products/default.jpg",
-      "url": "http://localhost:3000",
+      "url": "https://open-portfolio-demo.bedev.site",
       "technologies": "Next.js, 生成AI, PostgreSQL, Vercel, Googleログイン"
     }
   ]

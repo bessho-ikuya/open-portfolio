@@ -5,6 +5,7 @@ import { WorkHistory } from '@/components/WorkHistory';
 import { Projects } from '@/components/Projects';
 import { SectionHeader } from '@/components/SectionHeader';
 import SettingLang from '@/components/SettingLang';
+import ThemeToggle from '@/components/ThemeToggle';
 import { Langs } from '@/i18n/config';
 import { createTranslator } from '@/i18n';
 
@@ -73,8 +74,8 @@ interface Project {
   title: string;
   description: string;
   imageUrl: string;
-  url?: string;
   technologies: string;
+  url?: string;
 }
 
 export default async function Home({ params }: { params: { locale: Langs } }) {
@@ -86,8 +87,9 @@ export default async function Home({ params }: { params: { locale: Langs } }) {
   return (
     <div className="min-h-screen bg-[#f5f5f5] dark:bg-gray-900 relative">
       {/* Background Banner */}
-      <div className="absolute top-0 left-0 w-full h-[200px] bg-teal-500 dark:bg-blue-800" />
-      <div className="fixed top-4 right-4 z-50">
+      <div className="absolute top-0 left-0 w-full h-[200px] bg-teal-500" />
+      <div className="fixed top-4 right-4 z-50 flex gap-2">
+        <ThemeToggle />
         <SettingLang />
       </div>
 
