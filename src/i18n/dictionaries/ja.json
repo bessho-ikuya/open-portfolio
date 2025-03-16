@@ -1,5 +1,13 @@
 {
   "setting": "@setting",
   "Qiita Article": "Qiita記事",
-  "Qiita articles written by me": "Qiitaで書いた記事"
+  "Qiita articles written by me": "Qiitaで書いた記事",
+  "Works": "作品",
+  "Works List": "作成した作品一覧",
+  "Read Qiita articles": "Qiitaで記事を読む",
+  "No data": "データがありません",
+  "Skills": "スキル",
+  "Technical skills and experience": "技術スキルと経験年数",
+  "Work History": "職務経歴",
+  "Work History Description": "職務経歴をまとめたものです。"
 }

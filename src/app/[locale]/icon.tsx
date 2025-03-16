@@ -21,7 +21,7 @@ const getNameIcon = async (locale: Langs) => {
 // Image generation
 export default async function Icon({ params }: { params: { locale: Langs } }) {
   const name = await getNameIcon(params.locale);
-  
+
   return new ImageResponse(
     (
       <div

@@ -115,13 +115,18 @@ export default async function Home({ params }: { params: { locale: Langs } }) {
               <WorkHistory workHistory={workHistory} />
               <Projects projects={projects} />
 
-              {t('setting.qiitaUserName') && t('setting.qiitaUserName') !== "" && (<>
-                {/* Qiita Section */}
-                <div>
-                  <SectionHeader title={t('Qiita Article')} description={t('Qiita articles written by me')} />
-                  <QiitaArticleList userName={t('setting.qiitaUserName')} />
-                </div>
-              </>)}
+              {t('setting.qiitaUserName') && t('setting.qiitaUserName') !== '' && (
+                <>
+                  {/* Qiita Section */}
+                  <div>
+                    <SectionHeader
+                      title={t('Qiita Article')}
+                      description={t('Qiita articles written by me')}
+                    />
+                    <QiitaArticleList userName={t('setting.qiitaUserName')} />
+                  </div>
+                </>
+              )}
             </div>
           </div>
         </main>

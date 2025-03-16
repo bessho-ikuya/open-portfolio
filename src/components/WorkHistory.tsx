@@ -1,9 +1,10 @@
+'use client';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
 import { ChevronDown } from 'lucide-react';
 import { SectionHeader } from './SectionHeader';
-
+import useTranslation from '@/hooks/use-translation';
 interface WorkHistoryItem {
   order: number;
   period: string;
@@ -20,9 +21,11 @@ interface WorkHistoryProps {
 }
 
 export function WorkHistory({ workHistory }: WorkHistoryProps) {
+  const { t } = useTranslation();
+
   return (
     <div>
-      <SectionHeader title="職務経歴" description="職務経歴をまとめたものです。" />
+      <SectionHeader title={t('Work History')} description={t('Work History Description')} />
       <Card>
         <CardContent className="pt-6">
           <div className="space-y-8">

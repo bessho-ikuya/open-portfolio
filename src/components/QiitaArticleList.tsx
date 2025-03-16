@@ -3,6 +3,8 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { Badge } from '@/components/ui/badge';
+import useTranslation from '@/hooks/use-translation';
+import useLang from '@/hooks/use-lang';
 
 interface Article {
   title: string;
@@ -15,6 +17,8 @@ interface Article {
 
 export default function QiitaArticleList({ userName }: { userName: string }) {
   const [data, setData] = useState<Article[]>([]);
+  const { t } = useTranslation();
+  const { locale } = useLang();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -28,7 +32,7 @@ export default function QiitaArticleList({ userName }: { userName: string }) {
   }, [userName]);
 
   if (data.length === 0) {
-    return <div>データがありません</div>;
+    return <div>{t('No data')}</div>;
   }
 
   return (
@@ -49,14 +53,14 @@ export default function QiitaArticleList({ userName }: { userName: string }) {
               </div>
               <div className="flex items-center justify-between text-sm text-gray-500 pt-2 border-t border-gray-100 dark:border-gray-700">
                 <time dateTime={item.created_at}>
-                  {new Date(item.created_at).toLocaleDateString('ja-JP', {
+                  {new Date(item.created_at).toLocaleDateString(locale, {
                     year: 'numeric',
                     month: 'long',
                     day: 'numeric',
                   })}
                 </time>
                 <span className="text-teal-600 dark:text-teal-400 font-medium">
-                  Qiitaで記事を読む →
+                  {t('Read Qiita articles')} →
                 </span>
               </div>
             </div>

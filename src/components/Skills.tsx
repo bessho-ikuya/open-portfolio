@@ -1,7 +1,8 @@
+'use client';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { SectionHeader } from './SectionHeader';
-
+import useTranslation from '@/hooks/use-translation';
 interface SkillExperience {
   [key: string]: string;
 }
@@ -51,9 +52,11 @@ function renderExperienceSection(category: SkillCategory) {
 }
 
 export function Skills({ experience }: SkillsProps) {
+  const { t } = useTranslation();
+
   return (
     <div>
-      <SectionHeader title="スキル" description="技術スキルと経験年数" />
+      <SectionHeader title={t('Skills')} description={t('Technical skills and experience')} />
       <Card>
         <CardContent className="pt-6">
           <div className="space-y-6">
