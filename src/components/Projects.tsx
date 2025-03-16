@@ -3,6 +3,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import Image from 'next/image';
 import { SectionHeader } from './SectionHeader';
 import useTranslation from '@/hooks/use-translation';
+import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 
 interface ProjectItem {
   title: string;
@@ -34,8 +36,19 @@ export function Projects({ projects }: ProjectsProps) {
               <CardTitle className="text-lg">{project.title}</CardTitle>
               <CardDescription>{project.technologies}</CardDescription>
             </CardHeader>
-            <CardContent className="p-4 pt-0 shadow-none">
+            <CardContent className="p-4 pt-0 shadow-none flex flex-col gap-2">
               <p className="text-sm">{project.description}</p>
+              {project.url && (
+                <Link
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 group"
+                >
+                  {t('View Work')}{' '}
+                  <ArrowRight className="w-4 h-4 inline-block group-hover:translate-x-1 transition-transform" />
+                </Link>
+              )}
             </CardContent>
           </Card>
         ))}
