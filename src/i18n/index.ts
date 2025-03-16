@@ -18,7 +18,8 @@ const dictionaries = i18nConfig.locales.reduce(
   {} as { [K in Langs]: () => Promise<any> }
 );
 
-export const getDictionary = async (locale: Langs) => dictionaries[locale] ? dictionaries[locale]() : dictionaries.ja();
+export const getDictionary = async (locale: Langs) =>
+  dictionaries[locale] ? dictionaries[locale]() : dictionaries.ja();
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const getTranslation = (dict: any, path: string) => {

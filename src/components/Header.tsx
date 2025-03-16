@@ -42,13 +42,8 @@ export function Header({
         {/* Profile Image */}
         <div className="absolute left-1/2 -translate-x-1/2 -top-16">
           <Avatar className="h-32 w-32 border-4 border-teal-500 dark:border-gray-800 rounded-full">
-            {(imageUrl && imageUrl !== '') ? (
-              <Image
-                src={imageUrl}
-                alt="Profile"
-                fill
-                className="object-cover"
-              />
+            {imageUrl && imageUrl !== '' ? (
+              <Image src={imageUrl} alt="Profile" fill className="object-cover" />
             ) : (
               <div className="h-full w-full bg-gray-200 dark:bg-gray-700 rounded-full flex items-center justify-center">
                 <span className="text-gray-500 dark:text-gray-400 text-6xl font-bold">

@@ -12,9 +12,7 @@ export async function GET(request: Request) {
 
     let profileImageUrl = null;
     if (imageUrl && imageUrl !== '') {
-      const profileImageResponse = await fetch(
-        new URL(imageUrl, process.env.NEXT_PUBLIC_BASE_URL)
-      );
+      const profileImageResponse = await fetch(new URL(imageUrl, process.env.NEXT_PUBLIC_BASE_URL));
       const profileImageData = await profileImageResponse.arrayBuffer();
       const profileImageBase64 = Buffer.from(profileImageData).toString('base64');
       profileImageUrl = `data:image/jpeg;base64,${profileImageBase64}`;
@@ -72,23 +70,23 @@ export async function GET(request: Request) {
                 }}
               />
             ) : (
-                <span
-                  style={{
-                    color: '#9CA3AF',
-                    fontSize: '60px',
-                    fontWeight: 'bold',
-                    width: '128px',
-                    height: '128px',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    borderRadius: '50%',
-                    border: '4px solid #14b8a6',
-                    backgroundColor: '#374151',
-                  }}
-                >
-                  {name.slice(0, 1)}
-                </span>
+              <span
+                style={{
+                  color: '#9CA3AF',
+                  fontSize: '60px',
+                  fontWeight: 'bold',
+                  width: '128px',
+                  height: '128px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  borderRadius: '50%',
+                  border: '4px solid #14b8a6',
+                  backgroundColor: '#374151',
+                }}
+              >
+                {name.slice(0, 1)}
+              </span>
             )}
 
             {/* Name */}
