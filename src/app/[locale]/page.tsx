@@ -90,7 +90,8 @@ export default async function Home({ params }: { params: { locale: Langs } }) {
       <div className="absolute top-0 left-0 w-full h-[200px] bg-teal-500" />
       <div className="fixed top-4 right-4 z-50 flex gap-2">
         <ThemeToggle />
-        <SettingLang />
+        {process.env.NEXT_PUBLIC_LOCALES &&
+          process.env.NEXT_PUBLIC_LOCALES.split(',').length > 1 && <SettingLang />}
       </div>
 
       <div className="max-w-[1024px] mx-auto pt-24 md:pt-28 px-4 pb-16 relative">
