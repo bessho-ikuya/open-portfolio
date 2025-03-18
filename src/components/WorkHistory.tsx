@@ -51,29 +51,29 @@ export function WorkHistory({ workHistory }: WorkHistoryProps) {
                     <CollapsibleTrigger asChild>
                       <div className="flex items-center gap-1 text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 cursor-pointer transition-colors">
                         <ChevronDown className="h-4 w-4" />
-                        <span className="hover:underline">詳細を表示</span>
+                        <span className="hover:underline">{t('Show Details')}</span>
                       </div>
                     </CollapsibleTrigger>
                     <CollapsibleContent className="mt-4">
                       <div className="space-y-2 text-sm pl-2 border-l-2 border-gray-200">
                         <div>
-                          <span className="font-medium">担当工程：</span>
+                          <span className="font-medium">{t('Responsibilities')}</span>
                           <span className="text-gray-600 dark:text-gray-400">
                             {work.responsibilities}
                           </span>
                         </div>
                         <div>
-                          <span className="font-medium">人数規模：</span>
+                          <span className="font-medium">{t('Team Size')}</span>
                           <span className="text-gray-600 dark:text-gray-400">{work.teamSize}</span>
                         </div>
                         <div>
-                          <span className="font-medium">環境・言語：</span>
+                          <span className="font-medium">{t('Environment')}</span>
                           <span className="text-gray-600 dark:text-gray-400">
                             {work.environment}
                           </span>
                         </div>
                         <div>
-                          <span className="font-medium">フレームワーク：</span>
+                          <span className="font-medium">{t('Frameworks')}</span>
                           <span className="text-gray-600 dark:text-gray-400">
                             {work.frameworks}
                           </span>
