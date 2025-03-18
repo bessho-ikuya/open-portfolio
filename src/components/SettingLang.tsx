@@ -46,10 +46,10 @@ export default function SettingLang() {
               locale === lang ? 'bg-gray-100 dark:bg-gray-700' : ''
             }`}
           >
-            <span>{LANG_NAMES[lang]}</span>
+            <span>{LANG_NAMES[lang as keyof typeof LANG_NAMES]}</span>
             {locale === lang && (
               <span className="ml-auto text-xs text-gray-500 dark:text-gray-400">
-                {getCurrentLangLabel(locale)}
+                {getCurrentLangLabel(locale as keyof typeof LANG_NAMES)}
               </span>
             )}
           </DropdownMenuItem>

@@ -19,7 +19,7 @@ const dictionaries = i18nConfig.locales.reduce(
 );
 
 export const getDictionary = async (locale: Langs) =>
-  dictionaries[locale] ? dictionaries[locale]() : dictionaries.ja();
+  dictionaries[locale] ? dictionaries[locale]() : dictionaries[i18nConfig.defaultLocale]();
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const getTranslation = (dict: any, path: string) => {
