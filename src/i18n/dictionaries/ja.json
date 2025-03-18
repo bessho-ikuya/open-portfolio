@@ -12,8 +12,8 @@
   "Work History": "職務経歴",
   "Work History Description": "職務経歴をまとめたものです。",
   "Show Details": "詳細を表示",
-  "Responsibilities": "担当工程",
-  "Team Size": "人数規模",
-  "Environment": "環境・言語",
-  "Frameworks": "フレームワーク"
+  "Responsibilities: ": "担当工程: ",
+  "Team Size: ": "人数規模: ",
+  "Environment: ": "環境・言語: ",
+  "Frameworks: ": "フレームワーク: "
 }

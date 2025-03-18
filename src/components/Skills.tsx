@@ -19,19 +19,16 @@ interface SkillsProps {
 function renderExperienceItem(name: string, years: string) {
   return (
     <div key={name} className="flex items-center justify-between py-1">
-      <Badge
-        variant="outline"
-        className="font-normal bg-white dark:bg-transparent border-gray-400 dark:border-gray-600"
-      >
+      <Badge variant="outline" className="font-normal bg-background border-border">
         {name}
       </Badge>
       <span
         className={`text-xs ${
           years === '1年未満'
-            ? 'text-gray-600 dark:text-gray-500'
+            ? 'text-muted-foreground'
             : years === '1年～3年'
-              ? 'text-emerald-700 dark:text-teal-400'
-              : 'text-indigo-700 dark:text-blue-400'
+              ? 'text-primary'
+              : 'text-foreground font-semibold'
         }`}
       >
         {years}
@@ -43,7 +40,7 @@ function renderExperienceItem(name: string, years: string) {
 function renderExperienceSection(category: SkillCategory) {
   return (
     <div key={category.name} className="mb-6">
-      <h3 className="font-medium mb-3 text-gray-900 dark:text-gray-100">{category.name}</h3>
+      <h3 className="font-medium mb-3 text-foreground">{category.name}</h3>
       <div className="space-y-1">
         {Object.entries(category.skills).map(([name, years]) => renderExperienceItem(name, years))}
       </div>

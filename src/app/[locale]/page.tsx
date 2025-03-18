@@ -85,9 +85,9 @@ export default async function Home({ params }: { params: { locale: Langs } }) {
   const projects = t<Project[]>('setting.projects');
 
   return (
-    <div className="min-h-screen bg-[#f5f5f5] dark:bg-gray-900 relative">
+    <div className="min-h-screen bg-background relative">
       {/* Background Banner */}
-      <div className="absolute top-0 left-0 w-full h-[200px] bg-teal-500" />
+      <div className="absolute top-0 left-0 w-full h-[200px] bg-primary" />
       <div className="fixed top-4 right-4 z-50 flex gap-2">
         <ThemeToggle />
         {process.env.NEXT_PUBLIC_LOCALES &&

@@ -35,7 +35,7 @@ export default async function RootLayout({ children, params }: RootLayoutProps) 
       <body className={`${notoSansJp.className} antialiased`}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme={process.env.NEXT_PUBLIC_DEFAULT_THEME || 'light'}
           enableSystem
           disableTransitionOnChange
         >
