@@ -36,19 +36,17 @@ export function Header({
   };
 
   return (
-    <header className="bg-white border border-gray-200 dark:bg-gray-800 rounded-lg mt-2 overflow-visible relative">
+    <header className="bg-card border border-border rounded-lg mt-2 overflow-visible relative">
       {/* Profile Header Top */}
       <div className="relative pt-16">
         {/* Profile Image */}
         <div className="absolute left-1/2 -translate-x-1/2 -top-16">
-          <Avatar className="h-32 w-32 border-4 border-teal-500 rounded-full">
+          <Avatar className="h-32 w-32 border-4 border-primary rounded-full">
             {imageUrl && imageUrl !== '' ? (
               <Image src={imageUrl} alt="Profile" fill className="object-cover" />
             ) : (
-              <div className="h-full w-full bg-gray-200 dark:bg-gray-700 rounded-full flex items-center justify-center">
-                <span className="text-gray-500 dark:text-gray-400 text-6xl font-bold">
-                  {name.slice(0, 1)}
-                </span>
+              <div className="h-full w-full bg-muted rounded-full flex items-center justify-center">
+                <span className="text-muted-foreground text-6xl font-bold">{name.slice(0, 1)}</span>
               </div>
             )}
           </Avatar>
@@ -57,12 +55,10 @@ export function Header({
         {/* Profile Details */}
         <div className="px-4 md:px-8 pb-6">
           <div className="mt-4 text-center">
-            <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">{name}</h1>
-            <p className="text-gray-600 dark:text-gray-300 text-lg mb-4 mx-auto max-w-[75%]">
-              {title}
-            </p>
+            <h1 className="text-3xl font-bold text-foreground mb-2">{name}</h1>
+            <p className="text-muted-foreground text-lg mb-4 mx-auto max-w-[75%]">{title}</p>
 
-            <div className="flex flex-wrap gap-4 justify-start md:justify-center text-gray-600 dark:text-gray-400">
+            <div className="flex flex-wrap gap-4 justify-start md:justify-center text-muted-foreground">
               <div className="flex items-center">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -82,7 +78,7 @@ export function Header({
                   href={contactFormUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center hover:text-teal-600"
+                  className="flex items-center hover:text-primary"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -98,7 +94,7 @@ export function Header({
                 </a>
                 <button
                   onClick={handleCopy}
-                  className="p-1 hover:text-teal-600 relative"
+                  className="p-1 hover:text-primary relative"
                   aria-label="Copy email address"
                 >
                   {showCopied ? (
@@ -139,7 +135,7 @@ export function Header({
                   href={`https://github.com/${githubUsername}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center hover:text-teal-600"
+                  className="flex items-center hover:text-primary"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -155,7 +151,7 @@ export function Header({
                 </a>
                 <button
                   onClick={handleGithubCopy}
-                  className="p-1 hover:text-teal-600 relative"
+                  className="p-1 hover:text-primary relative"
                   aria-label="Copy GitHub username"
                 >
                   {showGithubCopied ? (

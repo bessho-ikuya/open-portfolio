@@ -27,7 +27,7 @@ export function Projects({ projects }: ProjectsProps) {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         {projects.map((project, index) => (
           <Card key={index} className="overflow-hidden">
-            <div className="h-40 bg-gray-200 dark:bg-gray-700 relative">
+            <div className="h-40 bg-muted relative">
               {project.imageUrl && (
                 <Image src={project.imageUrl} alt={project.title} fill className="object-cover" />
               )}
@@ -43,7 +43,7 @@ export function Projects({ projects }: ProjectsProps) {
                   href={project.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 group"
+                  className="flex items-center gap-2 group text-muted-foreground hover:text-primary"
                 >
                   {t('View Work')}{' '}
                   <ArrowRight className="w-4 h-4 inline-block group-hover:translate-x-1 transition-transform" />

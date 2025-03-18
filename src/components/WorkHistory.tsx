@@ -32,9 +32,9 @@ export function WorkHistory({ workHistory }: WorkHistoryProps) {
             {workHistory.map((work, index) => (
               <div key={index} className="relative pl-4">
                 {/* Timeline dot and line */}
-                <div className="absolute left-0 top-2 w-2 h-2 rounded-full bg-teal-500"></div>
+                <div className="absolute left-0 top-2 w-2 h-2 rounded-full bg-primary"></div>
                 {index !== workHistory.length - 1 && (
-                  <div className="absolute left-[3px] top-4 w-[2px] h-[calc(100%+2rem)] bg-teal-500/20"></div>
+                  <div className="absolute left-[3px] top-4 w-[2px] h-[calc(100%+2rem)] bg-primary/20"></div>
                 )}
 
                 {/* Content */}
@@ -43,40 +43,32 @@ export function WorkHistory({ workHistory }: WorkHistoryProps) {
                     {work.period}
                   </Badge>
                   <h3 className="font-bold text-lg">{work.projectName}</h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-400 mt-2 mb-4">
-                    {work.description}
-                  </p>
+                  <p className="text-sm text-muted-foreground mt-2 mb-4">{work.description}</p>
 
                   <Collapsible>
                     <CollapsibleTrigger asChild>
-                      <div className="flex items-center gap-1 text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 cursor-pointer transition-colors">
+                      <div className="flex items-center gap-1 text-sm text-muted-foreground hover:text-primary cursor-pointer transition-colors">
                         <ChevronDown className="h-4 w-4" />
                         <span className="hover:underline">{t('Show Details')}</span>
                       </div>
                     </CollapsibleTrigger>
                     <CollapsibleContent className="mt-4">
-                      <div className="space-y-2 text-sm pl-2 border-l-2 border-gray-200">
+                      <div className="space-y-2 text-sm pl-2 border-l-2 border-border">
                         <div>
-                          <span className="font-medium">{t('Responsibilities')}</span>
-                          <span className="text-gray-600 dark:text-gray-400">
-                            {work.responsibilities}
-                          </span>
+                          <span className="font-medium">{t('Responsibilities: ')}</span>
+                          <span className="text-muted-foreground">{work.responsibilities}</span>
                         </div>
                         <div>
-                          <span className="font-medium">{t('Team Size')}</span>
-                          <span className="text-gray-600 dark:text-gray-400">{work.teamSize}</span>
+                          <span className="font-medium">{t('Team Size: ')}</span>
+                          <span className="text-muted-foreground">{work.teamSize}</span>
                         </div>
                         <div>
-                          <span className="font-medium">{t('Environment')}</span>
-                          <span className="text-gray-600 dark:text-gray-400">
-                            {work.environment}
-                          </span>
+                          <span className="font-medium">{t('Environment: ')}</span>
+                          <span className="text-muted-foreground">{work.environment}</span>
                         </div>
                         <div>
-                          <span className="font-medium">{t('Frameworks')}</span>
-                          <span className="text-gray-600 dark:text-gray-400">
-                            {work.frameworks}
-                          </span>
+                          <span className="font-medium">{t('Frameworks: ')}</span>
+                          <span className="text-muted-foreground">{work.frameworks}</span>
                         </div>
                       </div>
                     </CollapsibleContent>

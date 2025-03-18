@@ -30,25 +30,22 @@ export default function SettingLang() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <button className="p-2 text-gray-700 hover:text-gray-900 bg-white hover:bg-gray-100 rounded-full transition-colors shadow-sm border border-gray-200 dark:bg-gray-800 dark:text-gray-300 dark:hover:text-gray-100 dark:border-gray-700 dark:hover:bg-gray-700">
+        <button className="p-2 text-muted-foreground hover:text-primary bg-background hover:bg-muted rounded-full transition-colors shadow-sm border border-border">
           <Languages className="w-5 h-5" />
         </button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent
-        align="end"
-        className="bg-white border border-gray-200 dark:bg-gray-800 dark:border-gray-700"
-      >
+      <DropdownMenuContent align="end" className="bg-background border border-border">
         {locales.map((lang) => (
           <DropdownMenuItem
             key={lang}
             onClick={() => changeLang(lang)}
-            className={`flex items-center gap-2 text-gray-700 hover:bg-gray-50 cursor-pointer dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-gray-100 ${
-              locale === lang ? 'bg-gray-100 dark:bg-gray-700' : ''
+            className={`flex items-center gap-2 text-foreground hover:bg-muted hover:text-primary cursor-pointer ${
+              locale === lang ? 'bg-muted text-primary' : ''
             }`}
           >
             <span>{LANG_NAMES[lang as keyof typeof LANG_NAMES]}</span>
             {locale === lang && (
-              <span className="ml-auto text-xs text-gray-500 dark:text-gray-400">
+              <span className="ml-auto text-xs text-primary/70">
                 {getCurrentLangLabel(locale as keyof typeof LANG_NAMES)}
               </span>
             )}
